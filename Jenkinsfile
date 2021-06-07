@@ -8,7 +8,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checkout...'
-                sh 'rm -rf UI; git clone https://github.com/LabregoPT/movie-analyst-api.git UI'
+                sh 'rm -rf UI; git clone https://github.com//movie-analyst-api.git UI'
             }
 
         }
@@ -22,7 +22,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                                sh 'cd UI; npm test'
+                                sh 'cd UI; nohup node server.js &; npm test'
             }
 
         }
