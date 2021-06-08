@@ -22,7 +22,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'cd UI; node server.js &'
+				echo "DB_NAME is $DB_NAME"
 				sh 'cd UI; npm test'
             }
 
