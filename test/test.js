@@ -49,7 +49,7 @@ describe('API', () => {
 describe('/GET publication', () => {
       it('it should GET any reply', (done) => {
         chai.request(server)
-            .get('/publication')
+            .get('/publications')
             .end((err, res) => {
                 res.should.have.status(200);
               done();
