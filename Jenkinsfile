@@ -22,7 +22,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'cd UI; nohup node server.js &'
+                sh 'cd UI; nohup DB_HOST="dbmysql.cx02uzagq3fl.us-west-1.rds.amazonaws.com" DB_USER="dbadmin" DB_PASS="dbpass1234567!" DB_NAME="movie_db" node server.js &'
 				sh 'cd UI; npm test'
             }
 
