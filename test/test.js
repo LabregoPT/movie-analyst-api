@@ -51,7 +51,7 @@ describe('/GET publication', () => {
         chai.request(server)
             .get('/publication')
             .end((err, res) => {
-                res.should.have.status(120);
+                res.should.have.status(200);
               done();
             });
       });
