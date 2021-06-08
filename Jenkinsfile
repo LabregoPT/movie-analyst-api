@@ -22,8 +22,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-				echo "DB_NAME is $DB_NAME"
-				echo "DB_USER is $DB_USER"
 				sh 'cd UI; npm test'
             }
 
