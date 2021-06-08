@@ -22,7 +22,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                                sh 'cd UI; nohup node server.js &; npm test'
+                sh 'cd UI; nohup node server.js &'
+				sh 'cd UI; npm test'
             }
 
         }
